@@ -43,4 +43,8 @@ body {
   background: black;
   position: absolute;
   top: 50%;
+  transform-origin: 100%; /* During a rotate elements by default rotate from there mid point, this will change rotate pivot to the far right of the element */
+  transform: rotate(90deg); /* Ensures all hands will start at 12 o'clock by default, opposed to 9 o'clock */
+  transition: all 0.05s; /* Slows down the hand transition instead of been instant  */
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); /* Makes for realistic hand movement - tick */
 }
