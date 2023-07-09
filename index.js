@@ -6,6 +6,8 @@ const hourDigital = document.querySelector('.hour-digits');
 const minDigital = document.querySelector('.min-digits');
 const amPm = document.querySelector('.amPm');
 
+const quote = document.querySelector('.coding-quote');
+
 function setDate() {
     // Using the built in Date object to get the current date and time
     const now = new Date();
@@ -53,14 +55,17 @@ function setDate() {
 
     hourDigital.textContent = `${hoursDigital}`;
     minDigital.textContent = `${minsDigital}`;
-    amPm.textContent = `${amOrPm}`
+    amPm.textContent = `${amOrPm}`;
 
-    console.log(now);
-    console.log(seconds);
-    console.log(secondsDegrees)
-    
-    
-    
+    // Quote that changes 3 times per minute
+    if (seconds < 20 ) {
+        quote.textContent = '"Time spent coding is not time lost but time invested in shaping a better future through innovation."';
+    } else if (seconds < 40) {
+        quote.textContent = '"Time is the most valuable currency in coding. Spend it wisely, for it determines the quality and efficiency of your creation."';
+    } else {
+        quote.textContent = '"In the world of programming, time is both a constraint and an opportunity. Embrace it, for within its bounds lies the power to create."';
+    }
+
     }
 
 setInterval(setDate, 1000); // Runs the setDate function once every 1 second

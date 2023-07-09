@@ -9,7 +9,7 @@ html {
 body {
   margin: 0;
   font-size: 2rem;
-  display: flex;
+  /* display: flex; */
   flex: 1;
   min-height: 100vh;
   align-items: center;
@@ -59,4 +59,14 @@ body {
   font-size: 5rem;
   border: 6px solid red;
   border-radius: 15px;
+}
+
+.quote-wrapper {
+  height: 130px;
+}
+
+.coding-quote {
+  display: block;
+  max-width: 70%;
+  margin: 50px auto;
 }
