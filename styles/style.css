@@ -48,3 +48,15 @@ body {
   transition: all 0.05s; /* Slows down the hand transition instead of been instant  */
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); /* Makes for realistic hand movement - tick */
 }
+
+.second-hand {
+  background-color: yellow;
+}
+
+.digital-display {
+  display: block;
+  margin-top: 70px;
+  font-size: 5rem;
+  border: 6px solid red;
+  border-radius: 15px;
+}
